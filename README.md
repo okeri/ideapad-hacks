@@ -1,6 +1,7 @@
 # ideapad-hacks
 Yoga 920 fn-lock and conservation mode acpi platform driver. Actually it should be work on next models:
 Yoga 700, Yoga 710, Yoga 720, Yoga 900, Yoga 910, Yoga 920, but this information needs confirmation. 
+Please NOTE: this code provided as is. You have to use it at your own risk.
 
 ## Building
 1. Be sure actual kernel headers installed(Checked 
