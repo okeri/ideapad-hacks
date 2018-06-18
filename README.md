@@ -1,7 +1,12 @@
 # ideapad-hacks
 Yoga 920 fn-lock and conservation mode acpi platform driver. Actually it should be work on next models:
 Yoga 700, Yoga 710, Yoga 720, Yoga 900, Yoga 910, Yoga 920, but this information needs confirmation.
-Please NOTE: this code provided as is. You have to use it at your own risk.
+Please NOTE: this code provided as is. You have to use it at your own risk. 
+
+## Supported kernel versions
+While this module was tested on 4.15+ kernels(i guess it will also work with ealer versions of linux kernel), 
+*4.18 kernel module **ideapad_laptop** supports fn_lock functionality out-of-box.*
+So if you have 4.18+ kernel you do not need ideapad-hacks.
 
 ## Building
 1. Be sure actual kernel headers installed
@@ -15,4 +20,4 @@ Please NOTE: this code provided as is. You have to use it at your own risk.
 5. Write new setting **sudo echo 0 > /sys/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/VPC2004:00/fn_lock**
 
 ## Known issues:
-ideapad-hacks is not compatible with ideapad_laptop kernel module from linux kernel mainline. To use ideapad you **MUST** unload or blacklist ideapad_laptop. Ideapad-hacks is temporary solution and it will be deprecated as soon as fn_lock related patches will be reviewed and applyed by linux kernel mantainers.
+ideapad-hacks is not compatible with *ideapad_laptop* kernel module from linux kernel mainline. To use ideapad you **MUST** unload or blacklist ideapad_laptop. Ideapad-hacks is temporary solution and it will be deprecated as soon as fn_lock related patches will be reviewed and applyed by linux kernel mantainers.
