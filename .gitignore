@@ -1,0 +1,6 @@
+Module.symvers
+modules.order
+spider2.mod*
+*.ko
+*.cmd
+*.o
