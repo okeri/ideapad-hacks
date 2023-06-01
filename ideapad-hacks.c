@@ -167,8 +167,8 @@ static int ideapad_add(struct platform_device *pdev)
 	struct ideapad *ideapad;
 	struct acpi_device *adev;
 
-	ret = acpi_bus_get_device(ACPI_HANDLE(&pdev->dev), &adev);
-	if (ret)
+        adev = acpi_fetch_acpi_dev(ACPI_HANDLE(&pdev->dev));
+        if (!adev)
             return -ENODEV;
 
 	ideapad = devm_kzalloc(&pdev->dev, sizeof(*ideapad), GFP_KERNEL);
